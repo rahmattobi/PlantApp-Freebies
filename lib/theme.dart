@@ -9,9 +9,19 @@ Color backgroundColor1 = Color(0xFFFBFDFF);
 Color tagColor = Color(0xff2F91EB);
 Color buttonColor = Color(0xff2DDA93);
 Color buttonColor2 = Color(0xff48a2f5);
+Color searchColor = Color(0xffd2d2d2);
+Color abjadColor = Color(0xffA1A8B9);
 
 TextStyle primaryTextStyle = GoogleFonts.roboto(
   color: primaryColor,
+);
+
+TextStyle searchTextStyle = GoogleFonts.roboto(
+  color: searchColor,
+);
+
+TextStyle abjadTextStyle = GoogleFonts.roboto(
+  color: abjadColor,
 );
 
 TextStyle whiteTextStyle = GoogleFonts.roboto(
