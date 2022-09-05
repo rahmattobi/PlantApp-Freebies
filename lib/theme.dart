@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 Color primaryColor = Color(0xFF36455A);
 Color whiteColor = Color(0xFFFFFFFF);
-Color secondaryColor = Color(0xFFD2D2D2);
+Color secondaryColor = Color(0xFF495566);
 Color subtitleColor = Color(0xFF6A6F7D);
 Color backgroundColor1 = Color(0xFFFBFDFF);
 Color tagColor = Color(0xff2F91EB);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/onBoardingPage/slider_page.dart';
+import 'package:plantapp/sign/login.dart';
 import 'package:plantapp/theme.dart';
 
 void main() {
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LandingPage(),
+      routes: {
+        '/': (context) => LandingPage(),
+        '/login': (context) => LoginPage(),
+      },
     );
   }
 }
@@ -27,9 +31,9 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   int _currentPage = 0;
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
-  List<Widget> _pages = [
+  final List<Widget> _pages = [
     SliderPage(
       'assets/a.png',
       'Identify Plants',
@@ -106,11 +110,16 @@ class _LandingPageState extends State<LandingPage> {
                       color: buttonColor,
                       borderRadius: BorderRadius.circular(5)),
                   child: (_currentPage == (_pages.length - 1))
-                      ? Text(
-                          'SIGN UP',
-                          style: whiteTextStyle.copyWith(
-                            fontWeight: bold,
-                            fontSize: 15,
+                      ? GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/login');
+                          },
+                          child: Text(
+                            'SIGN UP',
+                            style: whiteTextStyle.copyWith(
+                              fontWeight: bold,
+                              fontSize: 15,
+                            ),
                           ),
                         )
                       : Text(
