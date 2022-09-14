@@ -63,12 +63,30 @@ class DetailAbjad extends StatelessWidget {
                     margin: EdgeInsets.only(
                       bottom: 15,
                     ),
-                    child: Text(
-                      data.toString(),
-                      style: abjadTextStyle.copyWith(
-                        fontSize: 12,
-                        fontWeight: semiBold,
-                      ),
+                    child: Row(
+                      children: [
+                        data == 'CACTUS'
+                            ? GestureDetector(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, '/species_detail');
+                                },
+                                child: Text(
+                                  data.toString(),
+                                  style: abjadTextStyle.copyWith(
+                                    fontSize: 12,
+                                    fontWeight: semiBold,
+                                  ),
+                                ),
+                              )
+                            : Text(
+                                data.toString(),
+                                style: abjadTextStyle.copyWith(
+                                  fontSize: 12,
+                                  fontWeight: semiBold,
+                                ),
+                              ),
+                      ],
                     ),
                   );
                 }).toList(),

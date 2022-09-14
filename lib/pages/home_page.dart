@@ -160,9 +160,14 @@ class _HomePageState extends State<HomePage> {
                       image: 'assets/species_icon.png',
                     ),
                   ),
-                  MenuCard2(
-                    name: 'ARTICLES',
-                    image: 'assets/articles_icon.png',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/arctiles');
+                    },
+                    child: MenuCard2(
+                      name: 'ARTICLES',
+                      image: 'assets/articles_icon.png',
+                    ),
                   ),
                   MenuCard2(
                     name: 'SPECIES',

@@ -36,6 +36,7 @@ dependencies:
   google_fonts: ^3.0.1
   convex_bottom_bar: ^3.0.0
   motion_tab_bar_v2: ^0.2.6
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
